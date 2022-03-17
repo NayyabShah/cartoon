@@ -72,8 +72,8 @@ console.log(result)
             // </div>
 
             // </div>
-             <div>
-               <Card character={character}/>
+             <div key={character.name}>
+               <Card  character={character}/>
              </div>
           )
         }))

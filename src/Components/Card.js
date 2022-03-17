@@ -7,7 +7,7 @@ function Card(props) {
 
 
   return (
-    <div key={props.character.name} className="card">
+    <div  className="card">
               {/* <SearchBar charactersNames={character.name}/> */}
             <img className="character-img"src={props.character.image} alt="" />
             <div>
