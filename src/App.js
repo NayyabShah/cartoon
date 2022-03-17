@@ -1,6 +1,6 @@
 import "./App.css";
 import Characters from "./Components/Characters";
-import SearchBar from "./Components/SearchBar";
+
 
 
 
