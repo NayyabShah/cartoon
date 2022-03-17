@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./Characters.css";
 import SearchBar from "./SearchBar";
-import Modal from "./Modal";
+// import Modal from "./Modal";
+import Card from "./Card";
 
 function Characters() {
   const [characters, setCharacters] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setloading] = useState(true);
-  const [openModal, setOpenModal] = useState(false);
+  // const [openModal, setOpenModal] = useState(false);
 
 
 
@@ -57,20 +58,23 @@ console.log(result)
         !loading && (result.map((character) => {
 
           return (
-            <div key={character.name} className="card">
-              {/* <SearchBar charactersNames={character.name}/> */}
-            <img className="character-img"src={character.image} alt="" />
-            <div>
+            // <div key={character.name} className="card">
+            //   {/* <SearchBar charactersNames={character.name}/> */}
+            // <img className="character-img"src={character.image} alt="" />
+            // <div>
 
-            <button className="myButton" onClick={() => {setOpenModal(true)}} >Learn More</button>
-            <Modal onClose={() => setOpenModal(false)} openModal={openModal}
-            status={character.status}
-            species={character.species}
-            name={character.name}
-            />
-            </div>
+            // <button className="myButton" onClick={() => {setOpenModal(true)}} >Learn More</button>
+            // {openModal && <Modal onClose={() => setOpenModal(false)} openModal={openModal}
+            // status={character.status}
+            // species={character.species}
+            // name={character.name}
+            // />}
+            // </div>
 
-            </div>
+            // </div>
+             <div>
+               <Card character={character}/>
+             </div>
           )
         }))
       }

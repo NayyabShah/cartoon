@@ -1,13 +1,14 @@
 import React from 'react'
 
-function Modal(props, closeModal) {
+function Modal(props) {
   const name = props.name
   const status = props.status
   const species = props.species
 
-  if(!props.closeModal) {
-    return null
-  }
+  console.log(props);
+  // if(!props.closeModal) {
+  //   return null
+  // }
 
   return (
     <div className="myModal">
@@ -16,7 +17,7 @@ function Modal(props, closeModal) {
 <p>{status}</p>
 <p>{species}</p>
 </div>
-<button className="closeButton" onClick={() => props.onClose}>Close</button>
+<button className="closeButton" onClick={props.onClose}>Close</button>
     </div>
 
   )
